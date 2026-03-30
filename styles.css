@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 13px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 300;
+  background-color: #f5f0e8;
+  color: #1a1814;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+header {
+  padding: 0 2rem;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid;
+}
+
+main {
+  display: grid;
+  grid-template-columns: var(--aside-w) 1fr;
+  grid-template-areas: "sidebar posts";
+  min-height: calc(100vh - 64px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+aside#form-section {
+  grid-area: sidebar;
+  background-color: var(--paper);
+  border-right: 1px solid var(--border);
+  padding: 2rem 1.75rem;
+  position: sticky;
+  top: 64px; /* sticks below the header */
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+
+aside#form-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+aside#form-section input[type="text"],
+aside#form-section textarea {
+  width: 100%;
+  padding: 10px 12px;
+
+  font-size: 0.95rem;
+
+  background: #fff;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+  resize: vertical;
+  outline: none;
+}
+
+aside#form-section input[type="text"]:focus,
+aside#form-section textarea:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(26, 24, 20, 0.08);
+}
+
+
+.error-msg {
+  display: none;             /* hidden by default — JS shows it */
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 5px;
+  padding: 4px 8px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
