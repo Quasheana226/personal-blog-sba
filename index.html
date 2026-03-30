@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My blog</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Personal Blog</h1>
+    </header>
+
+    <main>
+      <section id="form-section">
+        <h2 id="form-title">New Post</h2>
+
+        <form id="post-form">
+          <label for="title">Post Title</label>
+          <input type="text" id="title" placeholder="Enter Title" />
+          <!--Error span-->
+          <span class="error-msg" id="title-error">Title is required</span>
+
+          <label for="content">Post Content Here</label>
+          <textarea
+            id="content"
+            rows="5"
+            placeholder="Please Write Something"
+          ></textarea>
+          <!--Error span-->
+          <span class="error-msg" id="content-error">Content is required</span>
+
+          <!--Submit button-->
+
+          <button type="submit" id="submit-btn">Add Post Please</button>
+
+          <!--Cancel button-->
+
+          <button type="button" id="cancel-btn">Cancel</button>
+        </form>
+      </section>
+
+
+
+      <section id="posts-section">
+
+
+
+
+
+      </section>
+    </main>
+  </body>
+</html>
