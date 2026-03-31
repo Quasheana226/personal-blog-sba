@@ -3,10 +3,7 @@
   margin: 0;
   padding: 0;
 }
-html {
-  font-size: 13px;
-  scroll-behavior: smooth;
-}
+
 
 body {
   font-weight: 300;
@@ -37,46 +34,12 @@ main {
   margin: 0 auto;
 }
 
-aside#form-section {
-  grid-area: sidebar;
-  background-color: var(--paper);
-  border-right: 1px solid var(--border);
-  padding: 2rem 1.75rem;
-  position: sticky;
-  top: 64px; /* sticks below the header */
-  height: calc(100vh - 64px);
-  overflow-y: auto;
-}
+.error-msg { display: none; color: red; }
+#cancel-btn { display: none; }
 
-aside#form-section h2 {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border);
-}
 
-aside#form-section input[type="text"],
-aside#form-section textarea {
-  width: 100%;
-  padding: 10px 12px;
 
-  font-size: 0.95rem;
 
-  background: #fff;
-  border: 1px solid var(--border-dark);
-  border-radius: var(--radius);
-  transition:
-    border-color var(--transition),
-    box-shadow var(--transition);
-  resize: vertical;
-  outline: none;
-}
-
-aside#form-section input[type="text"]:focus,
-aside#form-section textarea:focus {
-  border-color: var(--ink);
-  box-shadow: 0 0 0 3px rgba(26, 24, 20, 0.08);
-}
 
 
 .error-msg {
